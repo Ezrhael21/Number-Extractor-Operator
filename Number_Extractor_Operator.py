@@ -54,5 +54,7 @@ for number in odd_numbers:
         cubed_odd_numbers.append(int(number) ** 3)
 print (cubed_odd_numbers)
 # convert the list into string
+user_numbers_str = ' '.join(user_numbers)
+print (user_numbers_str)
 # display output
 # write odd and even numbers to files
