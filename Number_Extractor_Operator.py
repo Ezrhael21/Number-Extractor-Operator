@@ -31,6 +31,8 @@ while len(numbers) < number_inputs:
         i += 1
 
 # write the numbers to the file
+with open("numbers.txt", "w") as number_file:
+    number_file.write(",".join(numbers))
 # read the contents of the file
 # loop through each number and add it to the appropriate list
 # square the even numbers
