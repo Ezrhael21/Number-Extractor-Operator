@@ -49,6 +49,10 @@ for number in even_numbers:
         squared_even_numbers.append(int(number) ** 2)
 print (squared_even_numbers)
 # cube the odd numbers
+cubed_odd_numbers = []
+for number in odd_numbers:
+        cubed_odd_numbers.append(int(number) ** 3)
+print (cubed_odd_numbers)
 # convert the list into string
 # display output
 # write odd and even numbers to files
