@@ -36,6 +36,13 @@ with open("numbers.txt", "w") as number_file:
 with open("numbers.txt", "r") as input_file:
     user_numbers = input_file.read().strip().split(",")
 # loop through each number and add it to the appropriate list
+odd_numbers = []
+even_numbers = []
+for number in user_numbers:
+    if int(number) % 2 == 0:
+        even_numbers.append(number)
+    else:
+        odd_numbers.append(number)
 # square the even numbers
 # cube the odd numbers
 # convert the list into string
