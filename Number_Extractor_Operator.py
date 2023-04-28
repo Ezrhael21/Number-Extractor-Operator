@@ -9,12 +9,17 @@
 
 import pyfiglet
 
+print ("=" * 100)
 font = pyfiglet.figlet_format("Number Extractor / Operator", font = "slant", justify = "center")
 print (font)
 
+# introduction of the program
+print ("=" * 100)
 name = input("Enter your username: ")
+print ("=" * 100)
 print ("Hello!", name)
 print ("Today, We are going to extract numbers and use the math operator")
+print ("=" * 100)
 
 # ask user for input
 while True:
@@ -25,6 +30,7 @@ while True:
     else:
         number_inputs = int(user_input)
         break
+print ("=" * 100)
 
 numbers = []
 i = 0
@@ -39,6 +45,7 @@ while len(numbers) < number_inputs:
         i += 1
 
 # Time Delay
+print ("=" * 100)
 print ("Processing...")
 import time
 time.sleep(5)
@@ -46,9 +53,11 @@ time.sleep(5)
 # write the numbers to the file
 with open("numbers.txt", "w") as number_file:
     number_file.write(",".join(numbers))
+
 # read the contents of the file
 with open("numbers.txt", "r") as input_file:
     user_numbers = input_file.read().strip().split(",")
+
 # loop through each number and add it to the appropriate list
 odd_numbers = []
 even_numbers = []
@@ -57,23 +66,33 @@ for number in user_numbers:
         even_numbers.append(number)
     else:
         odd_numbers.append(number)
+
 # square the even numbers
 squared_even_numbers = []
 for number in even_numbers:
         squared_even_numbers.append(int(number) ** 2)
+
 # cube the odd numbers
 cubed_odd_numbers = []
 for number in odd_numbers:
         cubed_odd_numbers.append(int(number) ** 3)
+
 # convert the list into string
 user_numbers_str = ' '.join(user_numbers)
+
 # display output
+print ("=" * 100)
 print ("User numbers: ", user_numbers_str)
 print ("Cubed Odd numbers: ", str(cubed_odd_numbers).replace('[','').replace(']','').replace(',',''))
 print ("Squared Even numbers: ", str(squared_even_numbers).replace('[','').replace(']','').replace(',',''))
+
 # write odd and even numbers to files
 with open("triple.txt", "w") as triple_file, open("double.txt", "w") as double_file:
     for number in cubed_odd_numbers:
         triple_file.write(str(number) + "\n")
     for number in squared_even_numbers:
         double_file.write(str(number) +"\n")
+
+print ("=" * 100)
+print ("Thank you for using this program.")
+print ("=" * 100)
