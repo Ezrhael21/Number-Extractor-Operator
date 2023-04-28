@@ -58,3 +58,8 @@ print ("User numbers: ", user_numbers_str)
 print ("Cubed Odd numbers: ", str(cubed_odd_numbers).replace('[','').replace(']','').replace(',',''))
 print ("Squared Even numbers: ", str(squared_even_numbers).replace('[','').replace(']','').replace(',',''))
 # write odd and even numbers to files
+with open("triple.txt", "w") as triple_file, open("double.txt", "w") as double_file:
+    for number in cubed_odd_numbers:
+        triple_file.write(str(number) + "\n")
+    for number in squared_even_numbers:
+        double_file.write(str(number) +"\n")
