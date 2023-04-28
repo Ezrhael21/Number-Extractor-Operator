@@ -44,6 +44,10 @@ for number in user_numbers:
     else:
         odd_numbers.append(number)
 # square the even numbers
+squared_even_numbers = []
+for number in even_numbers:
+        squared_even_numbers.append(int(number) ** 2)
+print (squared_even_numbers)
 # cube the odd numbers
 # convert the list into string
 # display output
