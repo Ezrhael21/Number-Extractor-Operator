@@ -47,14 +47,14 @@ for number in user_numbers:
 squared_even_numbers = []
 for number in even_numbers:
         squared_even_numbers.append(int(number) ** 2)
-print (squared_even_numbers)
 # cube the odd numbers
 cubed_odd_numbers = []
 for number in odd_numbers:
         cubed_odd_numbers.append(int(number) ** 3)
-print (cubed_odd_numbers)
 # convert the list into string
 user_numbers_str = ' '.join(user_numbers)
-print (user_numbers_str)
 # display output
+print ("User numbers: ", user_numbers_str)
+print ("Cubed Odd numbers: ", str(cubed_odd_numbers).replace('[','').replace(']','').replace(',',''))
+print ("Squared Even numbers: ", str(squared_even_numbers).replace('[','').replace(']','').replace(',',''))
 # write odd and even numbers to files
