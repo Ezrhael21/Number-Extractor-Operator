@@ -8,8 +8,15 @@
 # cube of all odd numbers found in the integers.txt.
 
 # ask user for input
-user_input = int(input("How many numbers would you like to input? "))
-print (user_input)
+while True:
+    user_input = int(input("How many numbers would you like to input? "))
+    # looping to accept only valid number
+    if not user_input.isnumeric():
+        print("Invalid input. Please enter a valid number.")
+    else:
+        number_inputs = int(user_input)
+        break
+print (number_inputs)
 # write the numbers to the file
 # read the contents of the file
 # loop through each number and add it to the appropriate list
