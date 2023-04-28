@@ -7,6 +7,11 @@
 # found in integers.txt and the second file will be named triple.txt containing the 
 # cube of all odd numbers found in the integers.txt.
 
+import pyfiglet
+
+font = pyfiglet.figlet_format("Number Extractor / Operator", font = "slant", justify = "center")
+print (font)
+
 name = input("Enter your username: ")
 print ("Hello!", name)
 print ("Today, We are going to extract numbers and use the math operator")
