@@ -7,6 +7,10 @@
 # found in integers.txt and the second file will be named triple.txt containing the 
 # cube of all odd numbers found in the integers.txt.
 
+name = input("Enter your username: ")
+print ("Hello!", name)
+print ("Today, We are going to extract numbers and use the math operator")
+
 # ask user for input
 while True:
     user_input = input("How many numbers would you like to input? ")
