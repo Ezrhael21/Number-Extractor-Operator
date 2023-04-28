@@ -9,14 +9,13 @@
 
 # ask user for input
 while True:
-    user_input = int(input("How many numbers would you like to input? "))
+    user_input = input("How many numbers would you like to input? ")
     # looping to accept only valid number
     if not user_input.isnumeric():
         print("Invalid input. Please enter a valid number.")
     else:
         number_inputs = int(user_input)
         break
-print (number_inputs)
 
 numbers = []
 i = 0
@@ -34,6 +33,8 @@ while len(numbers) < number_inputs:
 with open("numbers.txt", "w") as number_file:
     number_file.write(",".join(numbers))
 # read the contents of the file
+with open("numbers.txt", "r") as input_file:
+    user_numbers = input_file.read().strip().split(",")
 # loop through each number and add it to the appropriate list
 # square the even numbers
 # cube the odd numbers
