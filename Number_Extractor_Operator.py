@@ -29,6 +29,11 @@ while len(numbers) < number_inputs:
         numbers.append(num)
         i += 1
 
+# Time Delay
+print ("Processing...")
+import time
+time.sleep(5)
+
 # write the numbers to the file
 with open("numbers.txt", "w") as number_file:
     number_file.write(",".join(numbers))
