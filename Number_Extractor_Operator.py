@@ -8,6 +8,8 @@
 # cube of all odd numbers found in the integers.txt.
 
 # ask user for input
+user_input = int(input("How many numbers would you like to input? "))
+print (user_input)
 # write the numbers to the file
 # read the contents of the file
 # loop through each number and add it to the appropriate list
